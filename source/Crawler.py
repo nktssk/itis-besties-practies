@@ -26,7 +26,7 @@ class Crawler:
                  nested_link_class,
                  max_pages_count=100,
                  min_words_count=500,
-                 output_directory="output/",
+                 output_directory="output/pages/",
                  output_filename="index.txt"):
         self.__base_url = base_url
         self.__nested_link_class = nested_link_class
