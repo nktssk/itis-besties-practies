@@ -4,10 +4,12 @@ from crawler import Crawler
 import codecs
 
 from source.Searcher import Searcher
+from source.TfIdfGenerator import TfIdfGenerator
 from source.Tokenizer import Tokenizer
 
 isHomework_2 = False
-isHomework_3 = True
+isHomework_3 = False
+isHomework_4 = True
 
 if __name__ == '__main__':
     tokenizer = Tokenizer()
@@ -36,4 +38,6 @@ if __name__ == '__main__':
 
         searcher = Searcher()
         searcher.make()
-
+    if isHomework_4:
+        tfIdfGenerator = TfIdfGenerator()
+        tfIdfGenerator.main()

@@ -4,10 +4,9 @@ import re
 
 from source.Tokenizer import Tokenizer
 
-NOT = 'not'
 AND = 'and'
 OR = 'or'
-
+NOT = 'not'
 
 class Searcher:
 
