@@ -7,9 +7,18 @@
   {{super()}}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="/static/images/branding/google_shortcut.ico" rel="shortcut icon">
   <link href="/static/css/index.css" type="text/css" rel="stylesheet" >
   <!-- <script src="http://cdn.rawgit.com/phi-jp/phina.js/v0.2.0/build/phina.js"></script> -->
+{% endblock %}
+
+{% block navbar %}
+<div>
+    <center>
+      <h4>
+          Сосюк Никита и Латыпов Ришат представляют:
+      </h4>
+    </center>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -32,7 +41,7 @@
 
   </div>
 
-  <div class="row" id="inputBar" style="margin:0 35%;">
+  <div class="row" id="inputBar" style="margin:0 20%;">
     <div class="input-group" style="text-align:center" >
       {% if q %}
         <input id="inputField" type="text" class="form-control" value = "{{ q }}">
@@ -40,7 +49,7 @@
         <input id="inputField" type="text" class="form-control">
       {% endif %}
         <span class="input-group-btn">
-          <button id="searchBtn" class="btn btn-default" type="button">Искать</button>
+          <button id="searchBtn" class="btn btn-default" type="button">Go!</button>
         </span>
     </div>
   </div>
@@ -69,8 +78,8 @@
       </div>
       <!-- md&lg-only -->
       <div class="panel container visible-lg-block visible-md-block">
-        <h6> Результат поиска:</h6>
-        <h5 style="color:black;"> <a href = {{ result.link }} target="_blank" >
+        <h4>Результат поиска:</h4>
+        <h5><a href = {{ result.link }} target="_blank" >
           {{ result.title|safe }}
         </a></h5>
       </div>
@@ -99,6 +108,7 @@
 {% endif %}
 
 <!-- <script src='/static/js/piko.js'></script> -->
+
 {% endblock %}
 
 {% block scripts %}

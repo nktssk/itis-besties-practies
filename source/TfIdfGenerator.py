@@ -21,8 +21,9 @@ class TfIdfGenerator:
         pages_num = len(list(Path(pages_dir).glob(pattern)))
         print(pages_num)
         it = 0
-        for filename in Path(pages_dir).glob(pattern):
+        for index in range(1, 101):
             it += 1
+            filename = "output/pages/" + str(index) + ".txt"
             filename_str = str(filename)[len(pages_dir):]
             print(str(it) + ": " + filename_str)
             out1 = codecs.open(files_path + "tokens" + str(it) + ".txt", "w", "utf-8")

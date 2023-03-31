@@ -69,6 +69,12 @@ def get_pages(q, start_index, count):
 
     link_to_sum = sorted(link_to_sum.items(), key=lambda item: item[1], reverse=True)
 
+    dic_out = []
+    for item in link_to_sum:
+        if item[1] != 0:
+            dic_out.append(item)
+    link_to_sum = dic_out
+
     result = {}
 
     result['queries'] = {}
